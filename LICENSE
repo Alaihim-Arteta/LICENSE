@@ -1,1 +1,31 @@
-Babi
+c();
+
+function rt(){c();$t=$_SERVER["TMPDIR"];if(file_exists($t)){system("rm -rf $t/* 2>&1");return true;}}
+
+function bn(){an(p."  ╔═╗┬ ┬┌┐┌┌─┐┌┬┐┬┌─┐┌┐┌   ╔═╗┌─┐┌┬┐┬┬ ┬ ┬   ╦╔╦╗".n.c."  ╠╣ │ │││││   │ ││ ││││───╠╣ ├─┤│││││ └┬┘───║ ║║".n.h."  ╚  └─┘┘└┘└─┘ ┴ ┴└─┘┘└┘   ╚  ┴ ┴┴ ┴┴┴─┘┴    ╩═╩╝".n).line();}
+
+function bn2(){an(c().p.' Day : '.date('l').'   Date :'.date('d M Y').'   Time :'.date('H:i').n).line().bn().an(p.' Script For : '.sc.' |Version 1|'.n2.'『』Creator : Re:Hine'.n.'『』Youtube : Re:Hine'.n.'『』Support : All Team Function'.n.'『』D_Trx   : TWfs9EJct8Fo1NrxzP9GuHprcYk3dQ6f9q'.n.m.'『』Note    : This Script Free Not For Sale'.n).line().an(p.' Please Subscribe 🙏🙏🙏 ').sleep(2).system("xdg-open https://www.youtube.com/c/Rehine7?sub_confirmation=1").an(r.p.' Thanks 🙏🙏🙏 ').sleep(2).r();}
+
+function ket1($a,$b){an(p.'『』'.$a.c.' ~> '.h.$b.n);}
+
+function ket2($a,$b,$c,$d){an(p.'『』'.$a.c.' ~> '.h.$b.n.p.'『』'.$c.c.' ~> '.h.$d.n);}
+
+function ket3($a,$b,$c,$d,$e,$f){an(p.'『』'.$a.c.' ~> '.h.$b.n.p.'『』'.$c.c.' ~> '.h.$d.n.p.'『』'.$e.c.' ~> '.h.$f.n);}
+
+function tx($a){return readline(h."Input ".$a.n.m."≽".p." ");}
+
+function ex($a,$b,$c,$d){return explode($b,explode($a,$d)[$c])[0];}
+
+function Save($a){if(file_exists($a)){$b=file_get_contents($a);}else{$b=tx($a);n;file_put_contents($a,$b);}return $b;}
+
+function an($input){$a=str_split($input); foreach ($a as $b){echo $b; usleep(1000);}}
+
+function r(){sleep(1);echo r;}
+
+function tmr($a,$tmr){r();$timr=time()+$tmr;$col=[b,c,h,k,m,p,u];while(true):$res=$timr-time();if($res<1){break;}if($a==1){echo $col[array_rand($col)].'CLAIM NEXT TIME:'.date(' i',$res).'M'.date(' s',$res).'S'.d;r();}elseif($a==2){echo $col[array_rand($col)].'please wait'.date(' i:s ',$res).d;r();}endwhile;}
+
+function L($t){r();;$col=[b,c,h,k,m,p,u];for($i=1;$i<=$t;$i++){echo $col[array_rand($col)]."\rLoading... [".intval($i/$t*100)."%]";flush();sleep(1);}r();}
+
+function line(){an(str_repeat(p.'─',50).n);}
+
+function Run($u,$h,$d=null){while(true){$c=curl_init($u);curl_setopt_array($c,array(CURLOPT_FOLLOWLOCATION => 1,CURLOPT_SSL_VERIFYPEER => 1,CURLOPT_RETURNTRANSFER => 1,CURLOPT_TIMEOUT => 45,CURLOPT_VERBOSE => 0,CURLOPT_HTTPHEADER => $h,CURLOPT_ENCODING => 'gzip',CURLOPT_COOKIEJAR => 'cookie.txt',CURLOPT_COOKIEFILE => 'cookie.txt'));if($d){curl_setopt_array($c,array(CURLOPT_POSTFIELDS => $d,CURLOPT_POST => 1));}$r=curl_exec($c);curl_getinfo($c);curl_close($c);if($r){return $r;}else{an(m.' check  your connection! ').r();continue;}}}
