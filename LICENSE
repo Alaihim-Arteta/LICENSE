@@ -1,4 +1,10 @@
+
+
+
+
 c();
+
+function c(){system('clear');}
 
 function rt(){c();$t=$_SERVER["TMPDIR"];if(file_exists($t)){system("rm -rf $t/* 2>&1");return true;}}
 
@@ -29,3 +35,8 @@ function L($t){r();;$col=[b,c,h,k,m,p,u];for($i=1;$i<=$t;$i++){echo $col[array_r
 function line(){an(str_repeat(p.'─',50).n);}
 
 function Run($u,$h,$d=null){while(true){$c=curl_init($u);curl_setopt_array($c,array(CURLOPT_FOLLOWLOCATION => 1,CURLOPT_SSL_VERIFYPEER => 1,CURLOPT_RETURNTRANSFER => 1,CURLOPT_TIMEOUT => 45,CURLOPT_VERBOSE => 0,CURLOPT_HTTPHEADER => $h,CURLOPT_ENCODING => 'gzip',CURLOPT_COOKIEJAR => 'cookie.txt',CURLOPT_COOKIEFILE => 'cookie.txt'));if($d){curl_setopt_array($c,array(CURLOPT_POSTFIELDS => $d,CURLOPT_POST => 1));}$r=curl_exec($c);curl_getinfo($c);curl_close($c);if($r){return $r;}else{an(m.' check  your connection! ').r();continue;}}}
+
+function r3($sitekey){global $anc;$co=explode("&",$anc)[2];$v=explode("&",$anc)[4];if($co==null or $co==null){an(m."salah masukin Link Anchor".n);unlink('Anchor');exit;}$token=ex('id="recaptcha-token" value="','"',1,Run($anc,array()));return ex('rresp","','"',1,Run("https://www.google.com/recaptcha/api2/reload?k=$sitekey",array(),"$v&reason=q&c=$token&$v&$co"));}
+
+function solve(){global $metode,$asu;while(true){$challenge=ex('"','"',5,Run($asu,array()));$img="img.jpg";file_put_contents($img,Run("https://api-secure.solvemedia.com/papi/media?c=".$challenge.";w=300;h=150;fg=000000;bg=f8f8f8",array()));if($metode==1){ulang:$cek=shell_exec('curl --silent -H "apikey:'.str_replace(" ","",substr(str_shuffle("0123456789abcdef"), 0, 10)."88957").'" --form "file=@'.$img.'" --form "language=eng" --form "ocrengine=2" --form "isOverlayRequired=false" --form "iscreatesearchablepdf=false" https://api.ocr.space/Parse/Image');if($cek=='"The API key is invalid"'){goto ulang;}$replace=preg_replace("/[^a-zA-Z]/","", json_decode($cek)->ParsedResults[0]->ParsedText);if($replace==null){$run=Run("https://vision.googleapis.com/v1/images:annotate?key=AIzaSyC3y-Em42htSB8UEZPqptJ78rlvL58_h6Y",array("user-agent:okhttp/3.14.9","content-type:application/json; charset=UTF-8","Host: vision.googleapis.com"),json_encode(["requests"=>[["image"=>["content"=>base64_encode(file_get_contents($img))],"features"=>[["type"=>"TEXT_DETECTION"]]]]]));$replace=strpos($run,'Enter the following:\n');if($replace){$replace=substr($run,$replace);$replace=str_replace('Enter the following:\n','',$replace);$replace=substr($replace,0,strpos($replace,'"'));$replace=str_replace('\n','',$replace);$replace= preg_replace("/[^a-zA-Z]/","",$replace);}if(strlen($replace)>25){}}}elseif($metode==2){shell_exec("termux-open ".$img);$replace=tx("Captcha");}else{an(m.' Bad Number You Selected! '.n);line();exit;}system("rm ".$img);if(strlen($replace==null)){an(b.'wait').r();L(5);}else{an(m.'Bypass');return "adcopy_response=".$replace."&adcopy_challenge=".$challenge; continue;}}}
+
