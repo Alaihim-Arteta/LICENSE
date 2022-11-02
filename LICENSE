@@ -10,7 +10,7 @@ function rt(){c();$t=$_SERVER["TMPDIR"];if(file_exists($t)){system("rm -rf $t/* 
 
 function bn(){an(p."  ╔═╗┬ ┬┌┐┌┌─┐┌┬┐┬┌─┐┌┐┌   ╔═╗┌─┐┌┬┐┬┬ ┬ ┬   ╦╔╦╗".n.c."  ╠╣ │ │││││   │ ││ ││││───╠╣ ├─┤│││││ └┬┘───║ ║║".n.h."  ╚  └─┘┘└┘└─┘ ┴ ┴└─┘┘└┘   ╚  ┴ ┴┴ ┴┴┴─┘┴    ╩═╩╝".n).line();}
 
-function bn2(){an(c().p.' Day : '.date('l').'   Date :'.date('d M Y').'   Time :'.date('H:i').n).line().bn().an(p.' Script For : '.sc.' |Version 1|'.n2.'『』Creator : Re:Hine'.n.'『』Youtube : Re:Hine'.n.'『』Support : All Team Function'.n.'『』D_Trx   : TWfs9EJct8Fo1NrxzP9GuHprcYk3dQ6f9q'.n.m.'『』Note    : This Script Free Not For Sale'.n).line().an(p.' Please Subscribe 🙏🙏🙏 ').sleep(2).system("xdg-open https://www.youtube.com/c/Rehine7?sub_confirmation=1").an(r.p.' Thanks 🙏🙏🙏 ').sleep(2).r();}
+function bn2(){date_default_timezone_set('Asia/Jakarta');an(c().p.' Day : '.date('l').'   Date :'.date('d M Y').'   Time :'.date('H:i').n).line().bn().an(p.' Script For : '.sc.' |Version 1|'.n2.'『』Creator : Re:Hine'.n.'『』Youtube : Re:Hine'.n.'『』Support : All Team Function'.n.'『』D_Trx   : TWfs9EJct8Fo1NrxzP9GuHprcYk3dQ6f9q'.n.m.'『』Note    : This Script Free Not For Sale'.n).line().an(p.' Please Subscribe 🙏🙏🙏 ').sleep(2).system("xdg-open https://www.youtube.com/c/Rehine7?sub_confirmation=1").an(r.p.' Thanks 🙏🙏🙏 ').sleep(2).r();}
 
 function ket1($a,$b){an(p.'『』'.$a.c.' ~> '.h.$b.n);}
 
@@ -28,7 +28,7 @@ function an($input){$a=str_split($input); foreach ($a as $b){echo $b; usleep(100
 
 function r(){sleep(1);echo r;}
 
-function tmr($a,$tmr){r();$timr=time()+$tmr;$col=[b,c,h,k,m,p,u];while(true):$res=$timr-time();if($res<1){break;}if($a==1){echo $col[array_rand($col)].'CLAIM NEXT TIME:'.date(' H',$res).'H'.date(' i',$res).'M'.date(' s',$res).'S'.d;r();}elseif($a==2){echo $col[array_rand($col)].'please wait'.date(' h:i:s ',$res).d;r();}endwhile;}
+function tmr($a,$tmr){r();$timr=time()+$tmr;$col=[b,c,h,k,m,p,u];while(true):$res=$timr-time();if($res<1){break;}if($a==1){echo $col[array_rand($col)].'CLAIM NEXT TIME:'.date(' H',$res).'H'.date(' i',$res).'M'.date(' s',$res).'S'.d;r();}elseif($a==2){echo $col[array_rand($col)].'please wait'.date(' H:i:s ',$res).d;r();}endwhile;}
 
 function L($t){r();;$col=[b,c,h,k,m,p,u];for($i=1;$i<=$t;$i++){echo $col[array_rand($col)]."\rLoading... [".intval($i/$t*100)."%]";flush();sleep(1);}r();}
 
