@@ -28,7 +28,7 @@ function an($input){$a=str_split($input); foreach ($a as $b){echo $b; usleep(100
 
 function r(){sleep(1);echo r;}
 
-function tmr($a,$tmr){r();$timr=time()+$tmr;$col=[b,c,h,k,m,p,u];while(true):$res=$timr-time();if($res<1){break;}if($a==1){echo $col[array_rand($col)].'CLAIM NEXT TIME:'.date(' H',$res).'H'.date(' i',$res).'M'.date(' s',$res).'S'.d;r();}elseif($a==2){echo $col[array_rand($col)].'please wait'.date(' i:s ',$res).d;r();}endwhile;}
+function tmr($a,$tmr){r();$timr=time()+$tmr;$col=[b,c,h,k,m,p,u];while(true):$res=$timr-time();if($res<1){break;}if($a==1){echo $col[array_rand($col)].'CLAIM NEXT TIME:'.date(' H',$res).'H'.date(' i',$res).'M'.date(' s',$res).'S'.d;r();}elseif($a==2){echo $col[array_rand($col)].'please wait'.date(' H:i:s ',$res).d;r();}endwhile;}
 
 function L($t){r();;$col=[b,c,h,k,m,p,u];for($i=1;$i<=$t;$i++){echo $col[array_rand($col)]."\rLoading... [".intval($i/$t*100)."%]";flush();sleep(1);}r();}
 
