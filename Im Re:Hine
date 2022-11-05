@@ -42,7 +42,7 @@ function r(){sleep(1);print "\r".str_repeat(' ',50)."\r";}
 
 function line(){print str_repeat(p.'─',50).n;}
 
-function ket($a,$aa,$b=0,$bb=0,$c=0,$cc=0,$d=0,$dd=0){if($a or $aa){print h.$a.c." -> ".p.$aa.n;}if($b or $bb){print h.$b.c." -> ".p.$bb.n;}if($c or $cc){print h.$cc.c." -> ".p.$cc.n;}if($d or $dd){print h.$dd.c." -> ".p.$dd.n;}}
+function ket($a,$aa,$b=0,$bb=0,$c=0,$cc=0,$d=0,$dd=0){if($a or $aa){print h.$a.c." > ".p.$aa.n;}if($b or $bb){print h.$b.c." > ".p.$bb.n;}if($c or $cc){print h.$cc.c." > ".p.$cc.n;}if($d or $dd){print h.$dd.c." > ".p.$dd.n;}}
 
 function curl($u,$h=0,$p=0){while(true){$ch=curl_init();curl_setopt($ch,CURLOPT_URL,$u);curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);curl_setopt($ch,CURLOPT_FOLLOWLOCATION,true);curl_setopt($ch,CURLOPT_SSL_VERIFYPEER,false);curl_setopt($ch,CURLOPT_SSL_VERIFYHOST,false);curl_setopt($ch,CURLOPT_CONNECTTIMEOUT,30);curl_setopt($ch,CURLOPT_COOKIE,TRUE);if($p){curl_setopt($ch,CURLOPT_POST,true);curl_setopt($ch,CURLOPT_POSTFIELDS,$p);}if($h){curl_setopt($ch,CURLOPT_HTTPHEADER,$h);}curl_setopt($ch,CURLOPT_HEADER,true);$r=curl_exec($ch);$c=curl_getinfo($ch);if(!$c)return "Curl Error : ".curl_error($ch); else{$hd=substr($r,0,curl_getinfo($ch,CURLINFO_HEADER_SIZE));$bd=substr($r,curl_getinfo($ch,CURLINFO_HEADER_SIZE));curl_close($ch);if(!$bd){print m."bad connection!";sleep(2);r();continue;}return array($hd,$bd);}}}
 
