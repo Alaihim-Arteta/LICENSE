@@ -1,0 +1,50 @@
+
+##############################################
+##############################################
+##############################################
+##############################################
+##############################################
+##############################################
+##############################################
+##############################################
+##############################################
+##############################################
+##############################################
+##############################################
+##############################################
+##############################################
+##############################################
+##############################################
+##############################################
+##############################################
+##############################################
+##############################################
+
+
+
+function c(){system('clear');}
+
+function rt(){c();$t=$_SERVER["TMPDIR"];if(file_exists($t)){system("rm -rf $t/* 2>&1");return true;}}
+
+function tx($a){return readline(h."Input ".$a.c." > ".p);}
+
+function ex($a,$b,$c,$d){return explode($b,explode($a,$d)[$c])[0];}
+
+function Save($a){if(file_exists($a)){$b=file_get_contents($a);}else{$b=tx($a);n;file_put_contents($a,$b);}return $b;}
+
+function an($input){$a=str_split($input); foreach ($a as $b){print $b; usleep(1500);}}
+
+function tmr($a,$tmr){date_default_timezone_set('UTC').r();$timr=time()+$tmr;$col=[b,c,h,k,m,p,u];while(true):$res=$timr-time();if($res<1){break;}if($a==1){print $col[array_rand($col)].'CLAIM NEXT TIME:'.date(' H',$res).'H'.date(' i',$res).'M'.date(' s',$res).'S'.d;r();}elseif($a==2){print $col[array_rand($col)].'please wait'.date(' H:i:s ',$res).d;r();}endwhile;}
+
+function L($t){r();$col=[b,c,h,k,m,p,u];for($i=1;$i<=$t;$i++){print $col[array_rand($col)]."\rLoading... [".intval($i/$t*100)."%]";flush();sleep(1);}r();}
+
+function r(){sleep(1);print "\r".str_repeat(' ',50)."\r";}
+
+function line(){print str_repeat(p.'─',50).n;}
+
+function ket($a,$aa,$b=0,$bb=0,$c=0,$cc=0,$d=0,$dd=0){if($a or $aa){print h.$a.c." -> ".p.$aa.n;}if($b or $bb){print h.$b.c." -> ".p.$bb.n;}if($c or $cc){print h.$cc.c." -> ".p.$cc.n;}if($d or $dd){print h.$dd.c." -> ".p.$dd.n;}}
+
+function curl($u,$h=0,$p=0){while(true){$ch=curl_init();curl_setopt($ch,CURLOPT_URL,$u);curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);curl_setopt($ch,CURLOPT_FOLLOWLOCATION,true);curl_setopt($ch,CURLOPT_SSL_VERIFYPEER,false);curl_setopt($ch,CURLOPT_SSL_VERIFYHOST,false);curl_setopt($ch,CURLOPT_CONNECTTIMEOUT,30);curl_setopt($ch,CURLOPT_COOKIE,TRUE);if($p){curl_setopt($ch,CURLOPT_POST,true);curl_setopt($ch,CURLOPT_POSTFIELDS,$p);}if($h){curl_setopt($ch,CURLOPT_HTTPHEADER,$h);}curl_setopt($ch,CURLOPT_HEADER,true);$r=curl_exec($ch);$c=curl_getinfo($ch);if(!$c)return "Curl Error : ".curl_error($ch); else{$hd=substr($r,0,curl_getinfo($ch,CURLINFO_HEADER_SIZE));$bd=substr($r,curl_getinfo($ch,CURLINFO_HEADER_SIZE));curl_close($ch);if(!$bd){print m."koneksi lambat!";sleep(2);r();continue;}return array($hd,$bd);}}}
+
+function Gv(){global $m_t,$u_s,$u_a;while(true){$ua=["user-agent: ".$u_a];$ca=explode('"',curl($u_s,$ua)[1])[5];$content=base64_encode(curl("https://api-secure.solvemedia.com/papi/media?c=".$ca.";w=300;h=150;fg=000000;bg=f8f8f8",$ua)[1]);if($m_t==1){$cap=preg_replace("/[^a-zA-Z0-9]/","",ex('"Enter the following:\n','"',1,curl("https://vision.googleapis.com/v1/images:annotate?key=AIzaSyC3y-Em42htSB8UEZPqptJ78rlvL58_h6Y",["content-type: application/json"],json_encode(["requests"=>[["image"=>["content"=>$content],"features"=>[["type"=>"TEXT_DETECTION"]]]]]))[1]));}elseif($m_t==2){file_put_contents("img.jpg",$content);
+system('termux-open img.jpg');$cap=tx("Captcha");unlink("img.jpg");}else{an(m.' Bad Number You Selected! '.n);line();exit;}if($cap==null){an(b.'wait').r();L(5);}else{an(m.'Bypass');return $ca."=".$cap; continue;}}}
