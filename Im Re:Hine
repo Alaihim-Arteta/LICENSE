@@ -54,3 +54,6 @@ function asci($string){$res=ip();date_default_timezone_set($res["t"]);$acssi = [
 
 function ip(){$if=json_decode(file_get_contents("https://ipinfo.io/?utm_source=ipecho.net&utm_medium=referral&utm_campaign=upsell_sister_sites"));return ["i"=>$if->ip,"r"=>$if->region,"c"=>$if->country,"t"=>$if->timezone];}
 
+function re2($su,$skey,$akey){$ua=["Host: api.anycaptcha.com","Content-Type: application/json"];$c=json_decode(curl("https://api.anycaptcha.com/createTask",$ua,json_encode(array("clientKey"=>$akey,"task"=>array("type"=>"RecaptchaV2TaskProxyless","websiteURL"=>$su,"websiteKey"=>$skey,"isInvisible"=>false))))[1]);if($c->errorId==1){return 0;}else{while(true){$res=json_decode(curl("https://api.anycaptcha.com/getTaskResult",$ua,json_encode(array("clientKey"=>$akey,"taskId"=>$c->taskId)))[1]);if($res->status=='ready'){return $res->solution->gRecaptchaResponse;}elseif($res->status=='processing'){print h."processing";sleep(5);r();}else{return 0;break;}}}}
+
+
