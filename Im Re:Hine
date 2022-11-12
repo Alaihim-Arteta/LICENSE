@@ -64,7 +64,7 @@ function re2($su,$skey,$akey){$ua=["Host: api.anycaptcha.com","Content-Type: app
 
 function Gv($sitekey){global $m_t;while(true){
 date_default_timezone_set("UTC");$info=ag();
-$a=file_get_contents("home1");
+$a=file_get_contents("https://api-secure.solvemedia.com/papi/challenge.ajax");
 $magic=ex("magic:          '","'",1,$a);
 $chalapi=ex("chalapi:        '","'",1,$a);
 $lang=ex("lang:           '","'",1,$a);
