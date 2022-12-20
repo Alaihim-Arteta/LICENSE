@@ -60,8 +60,8 @@ function ag(){$poco=["M2006C3MI","211033MI","220333QPG","M2012K11AG","M2104K10I"
 
 
 function curlx($u,$h=0,$p=0){
-while(true){$ch=curl_init();
-curl_setopt($ch,CURLOPT_URL,$u);
+while(true){$ch=curl_init($u);
+//curl_setopt($ch,CURLOPT_URL,$u);
 curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
 curl_setopt($ch,CURLOPT_FOLLOWLOCATION,true);
 curl_setopt($ch,CURLOPT_SSL_VERIFYPEER,false);
