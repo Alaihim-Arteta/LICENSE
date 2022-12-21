@@ -84,3 +84,5 @@ $hd=substr($r,0,curl_getinfo($ch,CURLINFO_HEADER_SIZE));
 $bd=substr($r,curl_getinfo($ch,CURLINFO_HEADER_SIZE));
 curl_close($ch);
 if(!$bd){print m."error network!";r();continue;}return array($hd,$bd);}}}
+
+
